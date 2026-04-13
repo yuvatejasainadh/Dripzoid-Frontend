@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- =========================
+         BASIC META
+    ========================== -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0f172a" />
+
+    <title>Dripzoid – Wear The Confidence</title>
+
+    <meta
+      name="description"
+      content="Dripzoid is a modern clothing brand built on confidence and identity. Alongside fashion, we engineer scalable, production-ready digital systems."
+    />
+
+    <!-- =========================
+         FAVICON & ICONS
+    ========================== -->
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!-- =========================
+         PWA MANIFEST
+    ========================== -->
+    <link rel="manifest" href="/manifest.json" />
+
+    <!-- =========================
+         OPEN GRAPH (SOCIAL PREVIEW)
+    ========================== -->
+    <meta property="og:title" content="Dripzoid – Wear The Confidence" />
+    <meta
+      property="og:description"
+      content="A confidence-first clothing brand. Powered by modern engineering and scalable digital systems."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Dripzoid" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  </head>
+
+  <body>
+    <noscript>
+      JavaScript is required to run this application.
+    </noscript>
+
+    <!-- React Mount Point -->
+    <div id="root"></div>
+
+    <!-- =========================
+         SERVICE WORKER REGISTRATION
+    ========================== -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker
+            .register('/service-worker.js')
+            .then(reg => {
+              console.log('Service Worker registered:', reg.scope);
+            })
+            .catch(err => {
+              console.error('Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.dripzoid.twa",
+      "sha256_cert_fingerprints": [
+        "AD:58:F6:FD:99:02:83:04:53:02:1F:DC:7A:40:AB:9A:3E:BF:A0:91:E4:23:C8:03:66:60:0C:FB:4B:81:86:F9"
+      ]
+    }
+  }
+]
